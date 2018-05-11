@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { Layout } from './Components/Layout/layout.component';
+
+const routes: Routes = [];
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        Layout
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
-        RouterModule.forRoot([
-            //{ path: '', redirectTo: 'home', pathMatch: 'full' },
-            //{ path: '**', redirectTo: 'home' }
-        ])
+        RouterModule.forRoot(routes)
     ]
 })
 export class AppModuleShared {
